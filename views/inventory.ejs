@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/theme.css">
+
+</head>
+
+<body class="home">
+<div class="container-fluid display-table">
+    <div class="row display-table-row">
+        <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
+            <div class="logo">
+                <a href="/"><img src="http://www.havelogo.com/50/L-58987-1347025499-e6b83608a9c89223c0da18f46771c597.png" alt="merkery_logo" class="hidden-xs hidden-sm" style="width: 40%; height: 40%" >
+                    <img src="" alt="merkery_logo" class="visible-xs visible-sm circle-logo">
+                </a>
+            </div>
+            <div class="navi">
+                <ul>
+                    <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i><span
+                                    class="hidden-xs hidden-sm">首頁</span></a></li>
+                    <li class="active"><a href="/inventory"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">存貨管理</span></a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i><span
+                                    class="hidden-xs hidden-sm">銷售報表</span></a>
+                    </li>
+                    <li><a href="/member"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">會員管理</span></a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Users</span></a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Setting</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-10 col-sm-11 display-table-cell v-align">
+            <!--<button type="button" class="slide-toggle">Slide Toggle</button> -->
+            <div class="row">
+                <header>
+                    <div class="col-md-7">
+                        <nav class="navbar-default pull-left">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="offcanvas"
+                                        data-target="#side-menu" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                        </nav>
+
+                    </div>
+                    <div class="col-md-5">
+                        <div class="header-rightside">
+                            <ul class="list-inline header-top pull-right">
+                                <li class="hidden-xs"><a href="#" class="add-project" data-toggle="modal"
+                                                         data-target="#add_project">進貨</a></li>
+                                <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                                <li>
+                                    <a href="#" class="icon-info">
+                                        <i class="fa fa-bell" aria-hidden="true"></i>
+                                        <span class="label label-primary">3</span>
+                                    </a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="http://www.havelogo.com/50/L-58987-1347025499-e6b83608a9c89223c0da18f46771c597.png" alt="user">
+                                        <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <div class="navbar-content">
+                                                <span>JS Krishna</span>
+                                                <p class="text-muted small">
+                                                    me@jskrishna.com
+                                                </p>
+                                                <div class="divider">
+                                                </div>
+                                                <a href="#" class="view btn-sm active">View Profile</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="user-dashboard">
+                <h1>存貨管理</h1>
+                <div class="row">
+                    <div class="col-md-5 col-sm-5 col-xs-12 gutter">
+
+                        <div class="sales">
+                            <h2>查看存貨</h2>
+
+                            <div class="btn-group">
+                                <button class="btn btn-secondary btn-lg dropdown-toggle" type="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    選擇查看項目
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a href="/inventory">總攬</a>
+                                    <a href="/inventory/?store=store1">政大分店</a>
+                                    <a href="/inventory/?store=store2">台大分店</a>
+                                    <a href="/inventory/?store=store3">信義分店</a>
+                                    <a href="/inventory/?store=store4">成大分店</a>
+                                    <a href="/inventory/?store=store5">市府分店</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <script type="text/javascript" language="javascript"
+                        src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+                <link rel="stylesheet" type="text/css"
+                      href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css"/>
+
+
+                <div id="example_wrapper" class="dataTables_wrapper">
+
+                    <table id="myexample" class="display nowrap dataTable dtr-inline" cellspacing="0" width="100%"
+                           role="grid" aria-describedby="example_info" style="width: 100%;">
+                        <thead class="bg-gray">
+                        <tr role="row">
+                            <th class="text-center" scope="col" colspan="6"></th>
+
+                        </tr>
+                        <tr role="row">
+                            <th class="sorting_desc text-center" tabindex="0" aria-controls="example" rowspan="1"
+                                colspan="1" aria-label="" style="width: 136px;" aria-sort="descending">分店名
+                            </th>
+                            <th class="sorting_desc text-center" tabindex="0" aria-controls="example" rowspan="1"
+                                colspan="1" aria-label="" style="width: 136px;" aria-sort="descending">書名
+                            </th>
+                            <th class="sorting text-center" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                                aria-label="" style="width: 30px;">庫存數量
+                            </th>
+                            <th class="sorting text-center" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                                aria-label="" style="width: 217px;">上次進貨時間
+                            </th>
+                            <th class="sorting text-center" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                                aria-label="" style="width: 30px;">急需補貨
+                            </th>
+                            <th class="sorting text-center" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                                aria-label="" style="width: 30px;">建議進貨數量
+                            </th>
+
+
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <% if(result){
+                        for(var i = 0;i < result.length;i++) { %>
+                        <tr role="row" class="odd tr-show text-center">
+                            <td class=""><%= result[i].store %></td>
+                            <td class=""><%= result[i].book %></td>
+                            <td class=""><%= result[i].amount %></td>
+                            <td class=""><%= result[i].date %></td>
+                            <td class="">
+                                <% if(result[i].amount <= FOI){ %>
+                                <li class="hidden-xs"><a href="#" class="add-project" data-toggle="modal"
+                                                         data-target="#add_project"">進貨</a></li>
+                                <% } %>
+                            </td>
+                            <td class=""><%if(result[i].amount <= FOI){%>
+                                <%=Math.ceil(FOI-result[i].amount)%>
+                                <%}%></td>
+
+
+                            <% } } %>
+
+                        </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+                <script src="/javascripts/form.js"></script>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<!-- Modal -->
+<div id="add_project" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header login-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title">進貨</h4>
+            </div>
+            <form action="/inventory" method="post">
+                <div class="modal-body">
+                    <input type="text" placeholder="書名" name="book">
+                    <input type="text" placeholder="數量" name="amount">
+                    <input type="text" placeholder="分店名" name="store">
+                    <textarea placeholder="備註"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="cancel" data-dismiss="modal">取消</button>
+                    <input type="submit" class="add-project" value="確認">
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+<script src="/javascripts/member.js"></script>
+
+</body>
+</html>
