@@ -9,6 +9,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
           integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
     <link rel="stylesheet" href="/stylesheets/theme.css">
+    <link rel="stylesheet" href="/stylesheets/salereport.css">
 
 </head>
 
@@ -25,14 +26,14 @@
                 <ul>
                     <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i><span
                                     class="hidden-xs hidden-sm">首頁</span></a></li>
-                    <li class="active"><a href="/inventory"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">存貨管理</span></a>
+                    <li><a href="/inventory"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">存貨管理</span></a>
                     </li>
-                    <li><a href="/salereport"><i class="fa fa-bar-chart" aria-hidden="true"></i><span
+                    <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i><span
                                     class="hidden-xs hidden-sm">銷售報表</span></a>
                     </li>
                     <li><a href="/member"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">會員管理</span></a>
                     </li>
-                    <li><a href="/purchase"><i class="fa fa-calendar" aria-hidden="true"></i><span class="hidden-xs hidden-sm">銷售</span></a>
+                    <li class=" active"><a href="/purchase"><i class="fa fa-calendar" aria-hidden="true"></i><span class="hidden-xs hidden-sm">銷售</span></a>
                     </li>
                     <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Setting</span></a>
                     </li>
@@ -63,7 +64,7 @@
                         <div class="header-rightside">
                             <ul class="list-inline header-top pull-right">
                                 <li class="hidden-xs"><a href="#" class="add-project" data-toggle="modal"
-                                                         data-target="#add_project">進貨</a></li>
+                                                         data-target="#add_project">會員購買</a></li>
                                 <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
                                 <li>
                                     <a href="#" class="icon-info">
@@ -92,104 +93,98 @@
                         </div>
                     </div>
                 </header>
-            </div>
-            <div class="user-dashboard">
-                <h1>存貨管理</h1>
-                <div class="row">
-                    <div class="col-md-5 col-sm-5 col-xs-12 gutter">
-
-                        <div class="sales">
-                            <h2>查看存貨</h2>
-
-                            <div class="btn-group">
-                                <button class="btn btn-secondary btn-lg dropdown-toggle" type="button"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    選擇查看項目
-                                </button>
-                                <div class="dropdown-menu">
-                                    <a href="/inventory">總攬</a>
-                                    <a href="/inventory/?store=store1">政大分店</a>
-                                    <a href="/inventory/?store=store2">台大分店</a>
-                                    <a href="/inventory/?store=store3">信義分店</a>
-                                    <a href="/inventory/?store=store4">成大分店</a>
-                                    <a href="/inventory/?store=store5">市府分店</a>
-                                </div>
-                            </div>
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-md-12">
+                            <br/><br/>
+                            <h3>
+                                <font size="36">銷售頁面</font>
+                            </h3>
+                            <br/><br/>
                         </div>
                     </div>
 
+                    <div class="row db-padding-btm db-attached">
+                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                            <div class="db-wrapper">
+                                <div class="db-pricing-eleven db-bk-color-one">
+                                    <div class="price">
+                                        <sup>$</sup>99
+                                        <small>per day</small>
+                                    </div>
+                                    <div class="type">
+                                        昨日銷售總金額
+                                    </div>
+                                    <ul>
+
+                                        <li><i class="fa fa-circle" aria-hidden="true"></i>作業管理 </li>
+                                        <li><i class="fa fa-circle" aria-hidden="true"></i>行銷管理 </li>
+                                        <li><i class="fa fa-circle" aria-hidden="true"></i>消失的密室</li>
+                                    </ul>
+                                    <div class="pricing-footer">
+
+                                        <a href="#" class="btn db-button-color-square btn-lg">今日暢銷</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                            <div class="db-wrapper">
+                                <div class="db-pricing-eleven db-bk-color-two popular">
+                                    <div class="price">
+                                        <sup>$</sup>159
+                                        <small>per day</small>
+                                    </div>
+                                    <div class="type">
+                                        今日銷售總金額
+                                    </div>
+                                    <ul>
+
+                                        <li><i class="fa fa-circle" aria-hidden="true"></i>人生不容易，是時候該放棄 </li>
+                                        <li><i class="fa fa-circle" aria-hidden="true"></i>coding海無涯，回頭是岸</li>
+                                        <li><i class="fa fa-circle" aria-hidden="true"></i>邁向成功的秘訣</li>
+                                    </ul>
+                                    <div class="pricing-footer">
+
+                                        <a href="#" class="btn db-button-color-square btn-lg">今日暢銷</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                            <div class="db-wrapper">
+                                <div class="db-pricing-eleven db-bk-color-three">
+                                    <div class="price">
+                                        <sup>$</sup>799
+                                        <small>per day</small>
+                                    </div>
+                                    <div class="type">
+                                        上週平均銷售總金額
+                                    </div>
+                                    <ul>
+
+                                        <li><i class="fa fa-circle" aria-hidden="true"></i>作業管理</li>
+                                        <li><i class="fa fa-circle" aria-hidden="true"></i>失去的勇氣</li>
+                                        <li><i class="fa fa-circle" aria-hidden="true"></i>暮光之城-蝕</li>
+                                    </ul>
+                                    <div class="pricing-footer">
+
+                                        <a href="#" class="btn db-button-color-square btn-lg">本週暢銷</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
-                <script type="text/javascript" language="javascript"
-                        src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-                <link rel="stylesheet" type="text/css"
-                      href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css"/>
-
-
-                <div id="example_wrapper" class="dataTables_wrapper">
-
-                    <table id="myexample" class="display nowrap dataTable dtr-inline" cellspacing="0" width="100%"
-                           role="grid" aria-describedby="example_info" style="width: 100%;">
-                        <thead class="bg-gray">
-                        <tr role="row">
-                            <th class="text-center" scope="col" colspan="6"></th>
-
-                        </tr>
-                        <tr role="row">
-                            <th class="sorting_desc text-center" tabindex="0" aria-controls="example" rowspan="1"
-                                colspan="1" aria-label="" style="width: 136px;" aria-sort="descending">分店名
-                            </th>
-                            <th class="sorting_desc text-center" tabindex="0" aria-controls="example" rowspan="1"
-                                colspan="1" aria-label="" style="width: 136px;" aria-sort="descending">書名
-                            </th>
-                            <th class="sorting text-center" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
-                                aria-label="" style="width: 30px;">庫存數量
-                            </th>
-                            <th class="sorting text-center" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
-                                aria-label="" style="width: 217px;">上次進貨時間
-                            </th>
-                            <th class="sorting text-center" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
-                                aria-label="" style="width: 30px;">急需補貨
-                            </th>
-                            <th class="sorting text-center" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
-                                aria-label="" style="width: 30px;">建議進貨數量
-                            </th>
-
-
-                        </tr>
-                        </thead>
-
-                        <tbody>
-                        <% if(result){
-                        for(var i = 0;i < result.length;i++) { %>
-                        <tr role="row" class="odd tr-show text-center">
-                            <td class=""><%= result[i].store %></td>
-                            <td class=""><%= result[i].book %></td>
-                            <td class=""><%= result[i].amount %></td>
-                            <td class=""><%= result[i].date %></td>
-                            <td class="">
-                                <% if(result[i].amount <= FOI){ %>
-                                <li class="hidden-xs"><a href="#" class="add-project" data-toggle="modal"
-                                                         data-target="#add_project"">進貨</a></li>
-                                <% } %>
-                            </td>
-                            <td class=""><%if(result[i].amount <= FOI){%>
-                                <%=Math.ceil(FOI-result[i].amount)%>
-                                <%}%></td>
-
-
-                            <% } } %>
-
-                        </tr>
-
-                        </tbody>
-                    </table>
-
-                </div>
-                <script src="/javascripts/form.js"></script>
             </div>
         </div>
-
+        <!--<script src="/javascripts/form.js"></script>-->
     </div>
+</div>
+
+</div>
 
 
 </div>
@@ -203,13 +198,13 @@
         <div class="modal-content">
             <div class="modal-header login-header">
                 <button type="button" class="close" data-dismiss="modal">×</button>
-                <h4 class="modal-title">進貨</h4>
+                <h4 class="modal-title">會員購書</h4>
             </div>
-            <form action="/inventory" method="post">
+            <form action="/purchase" method="post">
                 <div class="modal-body">
-                    <input type="text" placeholder="書名" name="book">
-                    <input type="text" placeholder="數量" name="amount">
-                    <input type="text" placeholder="分店名" name="store">
+                    <input type="text" placeholder="會員名" name="member_name">
+                    <input type="text" placeholder="總金額" name="cost">
+                    <input type="text" placeholder="分店名" name="storeID">
                     <textarea placeholder="備註"></textarea>
                 </div>
                 <div class="modal-footer">
@@ -222,6 +217,7 @@
     </div>
 </div>
 <script src="/javascripts/member.js"></script>
+
 
 </body>
 </html>

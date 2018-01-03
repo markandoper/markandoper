@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/theme.css">
+    <link rel="stylesheet" href="/stylesheets/salereport.css">
+
+</head>
+
+<body class="home">
+<div class="container-fluid display-table">
+    <div class="row display-table-row">
+        <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
+            <div class="logo">
+                <a href="/"><img src="http://www.havelogo.com/50/L-58987-1347025499-e6b83608a9c89223c0da18f46771c597.png" alt="merkery_logo" class="hidden-xs hidden-sm" style="width: 40%; height: 40%" >
+                    <img src="" alt="merkery_logo" class="visible-xs visible-sm circle-logo">
+                </a>
+            </div>
+            <div class="navi">
+                <ul>
+                    <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i><span
+                                    class="hidden-xs hidden-sm">首頁</span></a></li>
+                    <li><a href="/inventory"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">存貨管理</span></a>
+                    </li>
+                    <li class="active"><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i><span
+                                    class="hidden-xs hidden-sm">銷售報表</span></a>
+                    </li>
+                    <li><a href="/member"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">會員管理</span></a>
+                    </li>
+                    <li><a href="/purchase"><i class="fa fa-calendar" aria-hidden="true"></i><span class="hidden-xs hidden-sm">銷售</span></a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Setting</span></a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Info</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-10 col-sm-11 display-table-cell v-align">
+            <!--<button type="button" class="slide-toggle">Slide Toggle</button> -->
+            <div class="row">
+                <header>
+                    <div class="col-md-7">
+                        <nav class="navbar-default pull-left">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="offcanvas"
+                                        data-target="#side-menu" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                        </nav>
+
+                    </div>
+                    <div class="col-md-5">
+                        <div class="header-rightside">
+                            <ul class="list-inline header-top pull-right">
+                                <li class="hidden-xs"><a href="#" class="add-project" data-toggle="modal"
+                                                         data-target="#add_project">進貨</a></li>
+                                <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                                <li>
+                                    <a href="#" class="icon-info">
+                                        <i class="fa fa-bell" aria-hidden="true"></i>
+                                        <span class="label label-primary">3</span>
+                                    </a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="http://www.havelogo.com/50/L-58987-1347025499-e6b83608a9c89223c0da18f46771c597.png" alt="user">
+                                        <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <div class="navbar-content">
+                                                <span>JS Krishna</span>
+                                                <p class="text-muted small">
+                                                    me@jskrishna.com
+                                                </p>
+                                                <div class="divider">
+                                                </div>
+                                                <a href="#" class="view btn-sm active">View Profile</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-md-12">
+                            <br/><br/>
+                            <h3>
+                                <font size="36">即時銷售報表</font>
+                            </h3>
+                            <br/><br/>
+                        </div>
+                    </div>
+
+                    <div class="row db-padding-btm db-attached">
+                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                            <div class="db-wrapper">
+                                <div class="db-pricing-eleven db-bk-color-one">
+                                    <div class="price">
+                                        <sup>$</sup>99
+                                        <small>per day</small>
+                                    </div>
+                                    <div class="type">
+                                        昨日銷售總金額
+                                    </div>
+                                    <ul>
+
+                                        <li><i class="fa fa-circle" aria-hidden="true"></i>作業管理 </li>
+                                        <li><i class="fa fa-circle" aria-hidden="true"></i>行銷管理 </li>
+                                        <li><i class="fa fa-circle" aria-hidden="true"></i>消失的密室</li>
+                                    </ul>
+                                    <div class="pricing-footer">
+
+                                        <a href="#" class="btn db-button-color-square btn-lg">今日暢銷</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                            <div class="db-wrapper">
+                                <div class="db-pricing-eleven db-bk-color-two popular">
+                                    <div class="price">
+                                        <sup>$</sup>159
+                                        <small>per day</small>
+                                    </div>
+                                    <div class="type">
+                                        今日銷售總金額
+                                    </div>
+                                    <ul>
+
+                                        <li><i class="fa fa-circle" aria-hidden="true"></i>人生不容易，是時候該放棄 </li>
+                                        <li><i class="fa fa-circle" aria-hidden="true"></i>coding海無涯，回頭是岸</li>
+                                        <li><i class="fa fa-circle" aria-hidden="true"></i>邁向成功的秘訣</li>
+                                    </ul>
+                                    <div class="pricing-footer">
+
+                                        <a href="#" class="btn db-button-color-square btn-lg">今日暢銷</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                            <div class="db-wrapper">
+                                <div class="db-pricing-eleven db-bk-color-three">
+                                    <div class="price">
+                                        <sup>$</sup>799
+                                        <small>per day</small>
+                                    </div>
+                                    <div class="type">
+                                        上週平均銷售總金額
+                                    </div>
+                                    <ul>
+
+                                        <li><i class="fa fa-circle" aria-hidden="true"></i>作業管理</li>
+                                        <li><i class="fa fa-circle" aria-hidden="true"></i>失去的勇氣</li>
+                                        <li><i class="fa fa-circle" aria-hidden="true"></i>暮光之城-蝕</li>
+                                    </ul>
+                                    <div class="pricing-footer">
+
+                                        <a href="#" class="btn db-button-color-square btn-lg">本週暢銷</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            </div>
+                <!--<script src="/javascripts/form.js"></script>-->
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<!-- Modal -->
+<script src="/javascripts/member.js"></script>
+
+</body>
+</html>

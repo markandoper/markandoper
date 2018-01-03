@@ -9,6 +9,8 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var member = require('./routes/member');
 var inventory = require('./routes/inventory');
+var salereport = require('./routes/salereport');
+var purchase = require('./routes/purchase');
 // var for_member = require('./routes/for_member');
 
 var app = express();
@@ -29,6 +31,8 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/member', member);
 app.use('/inventory', inventory);
+app.use('/salereport', salereport);
+app.use('/purchase', purchase);
 // app.use('/for_member', for_member);
 
 
