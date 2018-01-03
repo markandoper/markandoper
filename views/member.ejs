@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/bootstrap-3.3.7-dist/css/bootstrap.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
           integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="/stylesheets/customer.css">
+    <link rel="stylesheet" href="/stylesheets/theme.css">
 </head>
 
 <body class="home">
@@ -16,18 +16,19 @@
     <div class="row display-table-row">
         <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
             <div class="logo">
-                <a hef="home.html"><img src="http://jskrishna.com/work/merkury/images/logo.png" alt="merkery_logo" class="hidden-xs hidden-sm">
+                <a href="/"><img src="http://www.havelogo.com/50/L-58987-1347025499-e6b83608a9c89223c0da18f46771c597.png" alt="merkery_logo" class="hidden-xs hidden-sm" style="width: 40%; height: 40%">
                     <img src="http://jskrishna.com/work/merkury/images/circle-logo.png" alt="merkery_logo" class="visible-xs visible-sm circle-logo">
                 </a>
             </div>
             <div class="navi">
                 <ul>
-                    <li class="active"><a href="#"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Home</span></a></li>
-                    <li><a href="#"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Workflow</span></a></li>
-                    <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Statistics</span></a></li>
-                    <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Calender</span></a></li>
+                    <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">首頁</span></a></li>
+                    <li><a href="/inventory"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">存貨管理</span></a></li>
+                    <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">銷售報表</span></a></li>
+                    <li class="active"><a href="/member"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">會員管理</span></a></li>
                     <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Users</span></a></li>
                     <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Setting</span></a></li>
+                    <li><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Info</span></a> </li>
                 </ul>
             </div>
         </div>
@@ -46,14 +47,14 @@
                                 </button>
                             </div>
                         </nav>
-                        <div class="search hidden-xs hidden-sm">
-                            <input type="text" placeholder="Search" id="search">
-                        </div>
+                        <!--<div class="search hidden-xs hidden-sm">-->
+                            <!--<input type="text" placeholder="Search" id="search">-->
+                        <!--</div>-->
                     </div>
                     <div class="col-md-5">
                         <div class="header-rightside">
                             <ul class="list-inline header-top pull-right">
-                                <li class="hidden-xs"><a href="#" class="add-project" data-toggle="modal" data-target="#add_project">Add Project</a></li>
+                                <li class="hidden-xs"><a href="#" class="add-project" data-toggle="modal" data-target="#add_project">加入會員</a></li>
                                 <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
                                 <li>
                                     <a href="#" class="icon-info">
@@ -62,7 +63,7 @@
                                     </a>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="http://jskrishna.com/work/merkury/images/user-pic.jpg" alt="user">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="http://www.havelogo.com/50/L-58987-1347025499-e6b83608a9c89223c0da18f46771c597.png" alt="user">
                                         <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
                                         <li>
@@ -253,7 +254,7 @@
         <div class="modal-content">
             <div class="modal-header login-header">
                 <button type="button" class="close" data-dismiss="modal">×</button>
-                <h4 class="modal-title">Add Project</h4>
+                <h4 class="modal-title">新增會員</h4>
             </div>
             <form action="/member" method="post">
                 <div class="modal-body">

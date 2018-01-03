@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var member = require('./routes/member');
+var inventory = require('./routes/inventory');
 // var for_member = require('./routes/for_member');
 
 var app = express();
@@ -27,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 app.use('/member', member);
+app.use('/inventory', inventory);
 // app.use('/for_member', for_member);
 
 

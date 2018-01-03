@@ -1,9 +1,20 @@
 var mongoose = require('../db').mongoose;
 
 var StorageSchema = new mongoose.Schema({
-    bookID: {type: mongoose.Schema.Types.ObjectId, ref: 'Book'},
-    amount: String,
-    storeID: {type: mongoose.Schema.Types.ObjectId, ref: 'Store'}
+    book: String,
+    amount: Number,
+    store: String,
+    date: String
 });
 
-module.exports = mongoose.model('Storage',StorageSchema);
+StorageSchema.statics.updateStorage = function (query, update, callback) {
+
+    this.update(query, update, {upsert: true}, callback);
+};
+
+StorageSchema.statics.getStorage = function (query, callback) {
+
+    this.find(query, callback);
+};
+
+module.exports = mongoose.model('Storage', StorageSchema);

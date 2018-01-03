@@ -6,4 +6,8 @@ var StoreSchema = new mongoose.Schema({
     phone: String
 });
 
-module.exports = mongoose.model('Store',StoreSchema);
+StoreSchema.statics.addStore = function (store, callback) {
+    this.create(store, callback);
+};
+
+module.exports=mongoose.model('Store',StoreSchema);
