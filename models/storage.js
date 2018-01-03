@@ -6,4 +6,4 @@ var StorageSchema = new mongoose.Schema({
     storeID: {type: mongoose.Schema.Types.ObjectId, ref: 'Store'}
 });
 
-module.exports.mongoose.model('Storage',StorageSchema);
+module.exports = mongoose.model('Storage',StorageSchema);

@@ -6,4 +6,4 @@ var StoreSchema = new mongoose.Schema({
     phone: String
 });
 
-module.exports.mongoose.model('Store',StoreSchema);
+module.exports = mongoose.model('Store',StoreSchema);
