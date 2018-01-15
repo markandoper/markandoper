@@ -11,6 +11,11 @@ var member = require('./routes/member');
 var inventory = require('./routes/inventory');
 var salereport = require('./routes/salereport');
 var purchase = require('./routes/purchase');
+var rank_one =require('./routes/rank_one');
+var rank_two =require('./routes/rank_two');
+var rank_three =require('./routes/rank_three');
+var info = require('./routes/info');
+
 // var for_member = require('./routes/for_member');
 
 var app = express();
@@ -33,6 +38,10 @@ app.use('/member', member);
 app.use('/inventory', inventory);
 app.use('/salereport', salereport);
 app.use('/purchase', purchase);
+app.use('/rank_one',rank_one);
+app.use('/rank_two',rank_two);
+app.use('/rank_three',rank_three);
+app.use('/info',info);
 // app.use('/for_member', for_member);
 
 
